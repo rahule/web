@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RahulEdathil – Product Designer</title>
+   <title>Rahul Edathil | UIUX/ Product Designer | Kochi, Kerala</title>
+<meta name="description" content="Experienced UI/UX &amp; Product Designer in Kochi with 7+ years of expertise in crafting user-friendly digital solutions for Healthcare, SaaS, and Cloud-based p" />
+
+
+<meta itemprop="name" content="Rahul Edathil | UIUX/ Product Designer | Kochi, Kerala" />
+<meta itemprop="description" content="Experienced UI/UX &amp; Product Designer in Kochi with 7+ years of expertise in crafting user-friendly digital solutions for Healthcare, SaaS, and Cloud-based p" />
+<meta itemprop="image" content="https://rahuledathil.com/images/photo.png" />
+<meta property="og:url" content="https://rahuledathil.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Rahul Edathil | UIUX/ Product Designer | Kochi, Kerala" />
+<meta property="og:description" content="Experienced UI/UX &amp; Product Designer in Kochi with 7+ years of expertise in crafting user-friendly digital solutions for Healthcare, SaaS, and Cloud-based p" />
+<meta property="og:image" content="https://rahuledathil.com/images/photo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Rahul Edathil | UIUX/ Product Designer | Kochi, Kerala" />
+<meta name="twitter:description" content="Experienced UI/UX &amp; Product Designer in Kochi with 7+ years of expertise in crafting user-friendly digital solutions for Healthcare, SaaS, and Cloud-based p" />
+<meta name="twitter:image" content="https://rahuledathil.com/images/photo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -12,27 +27,42 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav>
-            <a href="index.html" class="logo" onclick="showPage('home')">
-               <div class="logo-icon"><img src="images/logo.png"> </div>
+   <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><img src="images/logo.png"> </div>
                 <span>RahulEdathil</span>
-            </a>
-            <ul class="nav-center">
-                <li><a href="about.html" class="active" onclick="showPage('about')">About</a></li>
+      </a>
+
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="about.html" class="" onclick="showPage('about')">About</a></li>
                 <li><a href="mailto:rahuledat6@gmail.com?subject=Enquiry for Opportunity" onclick="showPage('contact')">Contact</a></li>
-            </ul>
-       <a href="https://drive.google.com/file/d/1vdb-wP-stT7CahWlidtMCjkn1FFk3mlp/view?usp=sharing" target="_blank" class="portfolio-btn">
+        </ul>
+        <a href="https://drive.google.com/file/d/1vdb-wP-stT7CahWlidtMCjkn1FFk3mlp/view?usp=sharing" target="_blank" class="portfolio-btn">
         <img src="images/btn-icon.svg" alt="icon" class="btn-icon">
         Download Resume
     </a>
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+      </nav>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav class="nav-mobile" id="navMobile">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="mailto:rahuledat6@gmail.com?subject=Enquiry for Opportunity">Contact</a></li>
+      </ul>
+      <a href="https://drive.google.com/file/d/1vdb-wP-stT7CahWlidtMCjkn1FFk3mlp/view?usp=sharing" target="_blank" class="download-btn">
+        <span class="download-icon">❉</span>
+        <span>Download Resume</span>
+      </a>
+    </nav>
+  </header>
 
     <!-- about Page -->
    
@@ -157,7 +187,7 @@ In addition to Theme Engine, I have designed high-profile client projects for ma
             <!-- Card 4 -->
             <a href="#" class="instagram-card">
                 <div class="card-content-insta">
-                    <img src="images/team4.jpg" alt="Instagram post 4">
+                    <img src="images/team4.png" alt="Instagram post 4">
                 </div>
             </a>
         </div>
