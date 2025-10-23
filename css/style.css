@@ -50,10 +50,12 @@ body.menu-open {
 
     header {
       background: white;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 1000;
+    padding: 10px 2rem;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 1px solid #f1f1f1;
+    position: fixed;
+    width: 100%;
     }
 
     .header-container {
@@ -231,7 +233,7 @@ body.menu-open {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 80px;
+            padding: 0 80px;
         }
 
         .logo {
@@ -351,7 +353,7 @@ body.menu-open {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 140px 0 80px;
+            padding: 60px 0 80px;
             position: relative;
         }
 
@@ -1735,7 +1737,7 @@ body.menu-open {
 .about-hero {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             padding: 0 100px;
             padding-top: 100px;
             min-height: 80vh;
