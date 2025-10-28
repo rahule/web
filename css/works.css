@@ -1,7 +1,7 @@
 .Work-container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 70px 24px ;
+            padding: 90px 24px 70px ;
         }
 
         .hero-section {
@@ -220,7 +220,7 @@
     border-radius: 12px;
     overflow: hidden;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 20px;
 }
 
 .hero-bg img {
@@ -284,10 +284,3 @@
             height: 100%;
             border: none;
         }
-
-        
-        
-
-
-
-

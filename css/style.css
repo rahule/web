@@ -51,10 +51,12 @@ body.menu-open {
     header {
       background: white;
     padding: 10px 2rem;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     border-bottom: 1px solid #f1f1f1;
-    position: fixed;
     width: 100%;
     }
 
@@ -1732,6 +1734,11 @@ body.menu-open {
            
         }
 
+        /* Add proper top spacing for inner pages to account for fixed header */
+        .about-hero {
+            padding-top: 100px !important;
+        }
+
         /* About me page */
 
 .about-hero {
@@ -1988,5 +1995,3 @@ body.menu-open {
       }
 
 }
-
-
