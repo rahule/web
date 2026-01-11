@@ -1,21 +1,14 @@
 {
-  "name": "rahul",
+  "name": "rahul-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Rahul portfolio website",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "live-server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rahule/rahul.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "Rahul",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/rahule/rahul/issues"
-  },
-  "homepage": "https://github.com/rahule/rahul#readme"
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
 }
