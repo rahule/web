@@ -24,12 +24,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/fav.png">
 </head>
-<body class="loading">
-    <div id="loader">
-        <div class="loader-content">
-            <h2>Loading...</h2>
-        </div>
-    </div>
+<body>
     <!-- Header -->
 
     <header>
@@ -76,13 +71,11 @@
             <div class="container">
                 <div class="hero-wrapper">
                     <div class="hero-content">
-   
                         <h1>UI UX Designer with a keen interest in <br><i> all-things art</i></h1>
                         <p class="hero-description">
                             Hi, I am Rahul Edathil, your next door UI UX designer. With a creative mind, I intend to bridge the gap between your imagination and intuitive design formats.
                         </p>
                     </div>
-
                     <div class="profile-image-wrapper">
                         <div class="profile-image">
                             <img src="images/photo.png" alt="Rahul Edathil">
@@ -96,7 +89,7 @@
                                     </textPath>
                                 </text>
                             </svg>
-                            <span class="badge-center">👋</span>
+                            <span class="badge-center">✨</span>
                         </div>
                     </div>
                 </div>
@@ -127,72 +120,6 @@
     </div>
 </div>
         </section>
-    <script>
-    // Smooth carousel for logos
-    document.addEventListener('DOMContentLoaded', function() {
-        const track = document.querySelector('.carousel-track');
-        if (!track) return;
-        const logos = Array.from(track.children);
-        const logoWidth = logos[0].offsetWidth + 24;
-        let position = 0;
-            const speed = 0.5; // px per ms (fast, non-stop)
-            let lastTs = null;
-            function animate(ts) {
-                if (!lastTs) lastTs = ts;
-                const delta = ts - lastTs;
-                position += speed * delta;
-                track.style.transform = `translateX(-${position}px)`;
-                // Reset for infinite loop
-                if (position >= logoWidth * (logos.length / 2)) {
-                    position = 0;
-                    track.style.transform = `translateX(0)`;
-                }
-                lastTs = ts;
-                requestAnimationFrame(animate);
-            }
-            requestAnimationFrame(animate);
-    });
-
-    // Stats Counter Animation
-    function animateNumber(el, end, duration = 1200) {
-        let start = 0;
-        let startTime = null;
-        const isPlus = String(end).includes('+');
-        const isComma = String(end).includes(',');
-        end = parseInt(String(end).replace(/\D/g, ''));
-        function step(ts) {
-            if (!startTime) startTime = ts;
-            const progress = Math.min((ts - startTime) / duration, 1);
-            let value = Math.floor(progress * end);
-            if (isComma) value = value.toLocaleString();
-            if (isPlus) value += '+';
-            el.textContent = value;
-            if (progress < 1) {
-                requestAnimationFrame(step);
-            } else {
-                if (isComma) el.textContent = end.toLocaleString();
-                else el.textContent = end;
-                if (isPlus) el.textContent += '+';
-            }
-        }
-        requestAnimationFrame(step);
-    }
-
-    let statsAnimated = false;
-    const statsSection = document.querySelector('.stats-container');
-    const statNumbers = document.querySelectorAll('.stat-number');
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !statsAnimated) {
-                statNumbers.forEach(el => {
-                    animateNumber(el, el.textContent, 1200);
-                });
-                statsAnimated = true;
-            }
-        });
-    }, { threshold: 0.5 });
-    if (statsSection) statsObserver.observe(statsSection);
-    </script>
 
 
 
@@ -423,7 +350,7 @@ services and remote care instantly.</p>
             window.scrollTo(0, 0);
         }
 
-        // Intersection Observer for scroll landing animation
+        // Intersection Observer for scroll animations
         const observerOptions = {
             threshold: 0.15,
             rootMargin: '0px 0px -80px 0px'
@@ -437,31 +364,15 @@ services and remote care instantly.</p>
             });
         }, observerOptions);
 
-        // Observe all major sections for landing animation
-        document.querySelectorAll('.section, .stats-container, .card, .logos-section').forEach((el, index) => {
-            el.style.transitionDelay = `${index * 0.12}s`;
-            observer.observe(el);
+        // Observe sections
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
         });
 
-        // Header background on scroll
-        let lastScrollY = window.scrollY;
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            const currentScrollY = window.scrollY;
-            if (currentScrollY > lastScrollY) {
-                // Scrolling down
-                header.classList.add('scrolled');
-            } else {
-                // Scrolling up
-                header.classList.remove('scrolled');
-            }
-            lastScrollY = currentScrollY;
-        });
-
-        // Remove loading blur after page loads
-        window.addEventListener('load', () => {
-            document.body.classList.remove('loading');
-            document.getElementById('loader').classList.add('hidden');
+        // Observe cards with staggered delay
+        document.querySelectorAll('.card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.15}s`;
+            observer.observe(card);
         });
     </script>
    <script>
